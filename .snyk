@@ -1,5 +1,5 @@
 custom_rules:
-  - id: Do Not Use XStream
+  - id: Do-Not-Use-XStream
     description: We want to phase out XStream
     severity: medium
     cwe:
