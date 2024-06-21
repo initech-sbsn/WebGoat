@@ -37,3 +37,7 @@ custom_rules:
       - swift
       - typescript
       - vb
+
+exclude:
+ global:
+   - src/main/java/org/owasp/webgoat/lessons/sqlinjection/**
