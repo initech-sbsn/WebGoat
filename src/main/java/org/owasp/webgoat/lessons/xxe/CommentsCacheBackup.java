@@ -47,7 +47,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 @Scope("singleton")
-public class CommentsCache {
+public class CommentsCacheBackup {
 
   static class Comments extends ArrayList<Comment> {
     void sort() {
@@ -61,7 +61,7 @@ public class CommentsCache {
 
   private final WebSession webSession;
 
-  public CommentsCache(WebSession webSession) {
+  public CommentsCacheBackup(WebSession webSession) {
     this.webSession = webSession;
     initDefaultComments();
   }
@@ -105,9 +105,6 @@ public class CommentsCache {
     var xsr = xif.createXMLStreamReader(new StringReader(xml));
 
     var unmarshaller = jc.createUnmarshaller();
-
-    xif.createXMLStreamReader(new StringReader(xml));
-
     return (Comment) unmarshaller.unmarshal(xsr);
   }
 
